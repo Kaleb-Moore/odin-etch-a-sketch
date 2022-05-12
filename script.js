@@ -38,3 +38,9 @@ function colorGrid() {
 function changeColor(choice) {
     color = choice;
 }
+
+function reset() {
+    const grid = document.querySelector('.grid');
+    let squares = grid.querySelectorAll('div');
+    squares.forEach((div) => div.style.backgroundColor = 'white');
+}

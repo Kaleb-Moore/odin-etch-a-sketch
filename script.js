@@ -1,6 +1,5 @@
 let color = "black"
 
-
 let makeGrid = (size) => {
     const grid = document.querySelector('.grid');
     let squares = grid.querySelectorAll('div');
@@ -27,8 +26,13 @@ let changeSize = (input) => {
     }
 }
 
+
 function colorGrid() {
-    this.style.backgroundColor = color;
+    if (color === 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
 }
 
 function changeColor(choice) {

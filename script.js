@@ -1,3 +1,6 @@
+let color = "black"
+
+
 let makeGrid = (size) => {
     const grid = document.querySelector('.grid');
     let squares = grid.querySelectorAll('div');
@@ -8,7 +11,8 @@ let makeGrid = (size) => {
     let newSize = size * size;
     for(let i = 0; i < newSize; i++) {
         let square = document.createElement('div');
-        square.style.backgroundColor = "blue";
+        square.addEventListener('mouseover', colorGrid)
+        square.style.backgroundColor = "white";
         grid.insertAdjacentElement('beforeend', square);
     }
 }
@@ -21,4 +25,8 @@ let changeSize = (input) => {
     } else {
         console.log("too many squares")
     }
+}
+
+function colorGrid() {
+    this.style.backgroundColor = color;
 }

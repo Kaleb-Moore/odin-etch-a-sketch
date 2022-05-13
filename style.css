@@ -11,10 +11,34 @@
     height: 60px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #1F2937;
+    color: white;
+}
+
+input {
+    height: 24px;
+    font-size: 16px;
+}
+
 .grid {
     width: 500px;
     height: 500px;
     display: grid;
+    border: 1px solid black;
+}
+
+.grid div {
+    border: lightgrey 1px solid;
 }
 
 .footer {
